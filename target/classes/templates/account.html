@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <!--  Bootstrap  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .actions {
+      display: flex;
+      justify-content: space-around;
+    }
+    .actions button {
+      margin: 0 5px;
+    }
+  </style>
+  <title>Account List</title>
+</head>
+<body>
+<div class="container mt-3">
+  <!-- Table -->
+  <table class="table table-bordered table-hover">
+    <thead>
+    <tr>
+      <th><input type="checkbox"/></th>
+      <th>User name</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td><input type="checkbox"></td>
+      <td th:text="${userName}"></td>
+      <td th:text="${passwordUserName}"></td>
+      <td th:text="${emailAddr}"></td>
+      <td class="actions">
+        <button class="btn btn-danger btn-sm">Delete</button>
+        <button class="btn btn-warning btn-sm">Edit</button>
+      </td>
+    </tr>
+    </thead>
+
+    <tbody id="product-table-body"></tbody>
+  </table>
+
+  <nav style="float: right">
+    <ul class="pagination" id="pagination"></ul>
+  </nav>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
